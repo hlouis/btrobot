@@ -1,0 +1,22 @@
+/**
+@mainpage Project BTRobot
+@author Louis Huang
+@date 14/02/11 17:56:05
+
+@section sec_intro Introduction
+
+This script use to collect torrents from eztv.it and download them through rTorrent. You can setup a list of instresting episodes and a output folder path. This script will scan completed episode and download new episode. When download finished, new downloaded episode will be orgnized in the output folder.
+
+@section sec_design Design
+
+We don't need download new episode in the rush, so we can just check it once a day. This set scripts will be called once a day by crontab.
+
+@subsection sec_design_flow Running flow
+
+- Load tv lists from local file
+- Load config from config file
+- Scan rtorrent download dir and move completed episodes to data dir
+- Scan data dir for the last downloaded episode
+- Grab torrent from eztv and add them to rtorrent download list
+
+*/
